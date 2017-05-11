@@ -1,3 +1,16 @@
+import sys
+import unicodedata
+
+def lista_caracteres(numero):
+    lista = {}
+    for i in range(0,numero):
+        try:
+            lista[chr(i)] = unicodedata.name(chr(i))
+        except Exception:
+            continue
+    return lista
+
+
 def buscar(*palavras_chave):
     """ Busca por caracteres que contenham a palavra chave em seu nome.
     Ex:
@@ -31,3 +44,14 @@ def buscar(*palavras_chave):
     tupla é o caracter e o segundo é seu nome. Assim ele pode ser utilizado no
     construtor de um dicionário
     """
+
+    palavras_chave_upper = [p.upper() for p in palavras_chave]
+
+    lista = lista_caracteres(sys.maxunicode)
+    lista_menor = lista
+    for p in palavras_chave_upper:
+        lista_menor = {k: v for k, v in lista_menor.items() if p in v}
+
+    for k, v in lista_menor.items():
+        yield(k,v)
+
