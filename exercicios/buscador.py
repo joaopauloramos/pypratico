@@ -54,6 +54,7 @@ def buscar(*palavras_chave):
 
     lista = lista_caracteres(sys.maxunicode)
     lista_menor = lista
+    
     for p in palavras_chave_upper:
         lista_menor = {k: v for k, v in lista_menor.items() if re.findall(r'\b%s\b'%p,v)}
 
