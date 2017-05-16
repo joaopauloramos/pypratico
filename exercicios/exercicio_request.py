@@ -12,7 +12,7 @@ class Avatar:
         python:
         >>> r = Avatar("renzon")
         >>> print(r.avatar)
-        https://avatars0.githubusercontent.com/u/402714?v=3
+        https://avatars0.githubusercontent.com/u/3457115?v=3
     
         @:param user : tipo str, com o usuario para busca de url
         @:return avatar: url com a foto do usuario
