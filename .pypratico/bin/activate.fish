@@ -29,7 +29,7 @@ end
 # unset irrelevant variables
 deactivate nondestructive
 
-set -gx VIRTUAL_ENV "/home/jpramos/PycharmProjects/pypratico/.pypratico"
+set -gx VIRTUAL_ENV "/Users/jpramos/PycharmProjects/pypratico/.pypratico"
 
 set -gx _OLD_VIRTUAL_PATH $PATH
 set -gx PATH "$VIRTUAL_ENV/bin" $PATH

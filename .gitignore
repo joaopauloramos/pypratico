@@ -20,6 +20,7 @@ lib64/
 parts/
 sdist/
 var/
+.pypratico/
 *.egg-info/
 .installed.cfg
 *.egg
@@ -87,3 +88,6 @@ ENV/
 
 # Rope project settings
 .ropeproject
+.idea/workspace.xml
+.pypratico/include/
+setup.py
