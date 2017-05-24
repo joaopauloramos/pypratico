@@ -34,7 +34,7 @@ class Avatar:
     def getAvatar(self):
 
         try:
-            response  = requests.get("https://api.github.com/users/%s" % self.user)
+            response  = requests.get(f"https://api.github.com/users/{self.user}")
             if response.status_code != 200:
                 raise Exception("Erro: %s" % response.status_code)
 
