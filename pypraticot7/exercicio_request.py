@@ -27,7 +27,8 @@ class Avatar:
 
     def getAvatar(self):
         try:
-            response  = requests.get(f"https://api.github.com/users/{self.user}")
+            response = requests.get(f"https://api.github.com/users/"
+                                    f"{self.user}")
             if response.status_code != 200:
                 raise Exception("Erro: %s" % response.status_code)
             return response.json().get("avatar_url")
@@ -40,6 +41,7 @@ class Avatar:
         endereco = self.avatar+"/"+numero+".jpg"
 
         return endereco
+
 
 if __name__ == "__main__":
     jp = Avatar("joaopauloramos")
