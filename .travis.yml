@@ -8,7 +8,7 @@ install: "pip install -r requirements-dev.txt"
 # Command to run tests
 script:
   - flake8 .
-  - py.text tests/
+  - py.test tests/
 # - py.test --cov=pytocli tests/
 # - python -m doctest README.md
 # after_sucess:

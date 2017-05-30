@@ -15,7 +15,6 @@ class Avatar:
         https://avatars0.githubusercontent.com/u/3457115?v=3
         @:param user : tipo str, com o usuario para busca de url
         @:return avatar: url com a foto do usuario
-    
     """
 
     def __init__(self, user):
@@ -27,7 +26,6 @@ class Avatar:
         self.image.show()
 
     def getAvatar(self):
-
         try:
             response  = requests.get(f"https://api.github.com/users/{self.user}")
             if response.status_code != 200:
@@ -42,8 +40,6 @@ class Avatar:
         endereco = self.avatar+"/"+numero+".jpg"
 
         return endereco
-
-
 
 if __name__ == "__main__":
     jp = Avatar("joaopauloramos")
