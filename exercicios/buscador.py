@@ -52,7 +52,6 @@ def buscar(*palavras_chave):
         segundo é seu nome.
         Assim ele pode ser utilizado no
         construtor de um dicionário
-
     """
 
     palavras_chave_upper = [p.upper() for p in palavras_chave]
