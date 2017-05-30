@@ -2,9 +2,10 @@ import sys
 import unicodedata
 import re
 
+
 def lista_caracteres(numero):
     lista = {}
-    for i in range(0,numero):
+    for i in range(0, numero):
         try:
             lista[chr(i)] = unicodedata.name(chr(i))
         except Exception:
@@ -46,15 +47,15 @@ def buscar(*palavras_chave):
         ♚ BLACK CHESS KING
 
         :param palavras_chave: tupla de strings
-        :return: generator onde cada elemento é uma tupla. O primeiro elemento da 
-        tupla é o caracter e o segundo é seu nome. Assim ele pode ser utilizado no
+        :return: generator onde cada elemento é uma tupla.
+         O primeiro elemento da 
+        tupla é o caracter e o segundo é seu nome.
+        Assim ele pode ser utilizado no
         construtor de um dicionário
         """
     palavras_chave_upper = [p.upper() for p in palavras_chave]
-
     lista = lista_caracteres(sys.maxunicode)
     lista_menor = lista
-    
     for p in palavras_chave_upper:
         lista_menor = {k: v for k, v in lista_menor.items() if re.findall(r'\b%s\b'%p,v)}
 
