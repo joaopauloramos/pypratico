@@ -48,11 +48,11 @@ def buscar(*palavras_chave):
 
         :param palavras_chave: tupla de strings
         :return: generator onde cada elemento é uma tupla.
-        O primeiro elemento da tupla é o caracter e o 
+        O primeiro elemento da tupla é o caracter e o
         segundo é seu nome.
         Assim ele pode ser utilizado no
         construtor de um dicionário
- 
+
     """
 
     palavras_chave_upper = [p.upper() for p in palavras_chave]
