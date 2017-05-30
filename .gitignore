@@ -93,3 +93,5 @@ ENV/
 .pypratico/include/
 setup.py
 .DS_Store
+*.jpeg
+*.jpg
